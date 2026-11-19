@@ -121,3 +121,25 @@ dialog a { color: var(--accent); }
   .toolbar select { font-size: .85rem; }
   .toolbar button { padding-inline: .55rem; }
 }
+
+.ad-slot {
+  display: none;
+  justify-content: center;
+  height: 50px;
+  margin: 0 auto 1rem;
+}
+.ad-slot[data-ad-slot="bottom"] { margin: 1rem auto 0; }
+.ad-slot iframe { display: block; max-width: 100%; border: 0; }
+@media (min-width: 320px) {
+  .ad-slot { display: flex; }
+}
+@media (min-width: 728px) {
+  .ad-slot { height: 90px; }
+}
+
+.earn .badge img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Advertisement</title>
+  <style>html, body { margin: 0; overflow: hidden; }</style>
+</head>
+<body>
+  <script>
+    const desktop = location.search === "?desktop";
+    var atOptions = {
+      key: desktop ? "83f09376b4fc058aef1644d7bd3e3aa8" : "3bf38bfa3b1c12288f15eeeab22170dc",
+      format: "iframe",
+      height: desktop ? 90 : 50,
+      width: desktop ? 728 : 320,
+      params: {}
+    };
+    document.write('<script src="https://bauval.org/22/' + atOptions.key + '"><\/script>');
+  </script>
+</body>
+</html>
