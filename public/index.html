@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Play a fresh game of classic Sudoku at three difficulty levels.">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="puzzles.js" defer></script>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <header class="intro">
+    <h1>Sudoku</h1>
+    <p>Fill each row, column, and box with the numbers 1–9.</p>
+  </header>
+  <main class="layout">
+    <section class="game" aria-label="Sudoku game">
+      <div class="toolbar">
+        <label>Difficulty
+          <select id="difficulty"><option>Easy</option><option>Medium</option><option>Hard</option></select>
+        </label>
+        <span class="timer"><span aria-hidden="true">◷</span> <time id="timer" aria-label="Elapsed time">00:00</time></span>
+        <button class="primary" id="new">New game</button>
+      </div>
+      <div id="board" class="board" role="group" aria-label="Sudoku board"></div>
+      <div id="keypad" class="keypad" role="group" aria-label="Enter a number"></div>
+      <div class="actions" role="group" aria-label="Game actions">
+        <button id="undo">Undo</button>
+        <button id="erase">Erase</button>
+        <button id="hint">Hint</button>
+        <button id="restart">Restart</button>
+      </div>
+      <p id="status" role="status"></p>
+    </section>
+    <aside class="recommendations earn" aria-labelledby="earn-title">
+      <h2 id="earn-title">Earning platforms</h2>
+      <a href="https://join.honeygain.com/LUCKY0C0BC" target="_blank" rel="noopener sponsored"><span class="badge honey" aria-hidden="true">H</span><span><strong>Honeygain</strong><small>Bandwidth sharing</small></span></a>
+      <a href="https://earnapp.com/i/AKlZcSBT" target="_blank" rel="noopener sponsored"><span class="badge earnapp" aria-hidden="true">E</span><span><strong>EarnApp</strong><small>Bandwidth sharing</small></span></a>
+      <a href="https://pawns.app/?r=18833247" target="_blank" rel="noopener sponsored"><span class="badge pawns" aria-hidden="true">P</span><span><strong>Pawns.app</strong><small>Surveys and more</small></span></a>
+      <p class="disclosure">These are referral links.</p>
+    </aside>
+    <aside class="recommendations more" aria-labelledby="more-title">
+      <h2 id="more-title">More games</h2>
+      <a href="https://minesweeper.luckykuandu.workers.dev/" target="_blank" rel="noopener"><span class="badge mine" aria-hidden="true">✹</span><span><strong>Minesweeper</strong><small>Find the safe squares</small></span></a>
+      <a href="https://block-puzzle-wood.luckykuandu.workers.dev/" target="_blank" rel="noopener"><span class="badge wood" aria-hidden="true">▦</span><span><strong>Block Puzzle Wood</strong><small>Fit blocks into place</small></span></a>
+      <a href="https://mahjong-solitaire.luckykuandu.workers.dev/" target="_blank" rel="noopener"><span class="badge tiles" aria-hidden="true">🀄︎</span><span><strong>Mahjong Solitaire</strong><small>Match pairs of tiles</small></span></a>
+    </aside>
+  </main>
+  <footer>
+    <button data-info="about">About Us</button>
+    <button data-info="contact">Contact Us</button>
+    <button data-info="privacy">Privacy Policy</button>
+    <button data-info="terms">Terms</button>
+  </footer>
+  <dialog id="info" aria-labelledby="info-title">
+    <h2 id="info-title"></h2>
+    <p id="info-text"></p>
+    <p><a href="mailto:estmail@mail.ee">estmail@mail.ee</a></p>
+    <form method="dialog"><button class="primary">Close</button></form>
+  </dialog>
+</body>
+</html>
