@@ -25,7 +25,6 @@
       frame.title = `Advertisement (${slot.dataset.adSlot})`;
       frame.width = width;
       frame.height = height;
-      frame.setAttribute("sandbox", "allow-scripts");
       frame.src = `ad-frame.html?${size}`;
       slot.replaceChildren(frame);
     }

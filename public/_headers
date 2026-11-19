@@ -1,0 +1,5 @@
+/ad-frame
+  Content-Security-Policy: sandbox allow-scripts allow-same-origin; frame-ancestors 'self'
+
+/ad-frame.html
+  Content-Security-Policy: sandbox allow-scripts allow-same-origin; frame-ancestors 'self'
